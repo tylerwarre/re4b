@@ -5,8 +5,6 @@
 - x64-GAS.s: Assembly output from linux with the x64 GAS assembler
 - x64-GAS.out: Binary from linux with the x64 GAS compiler
 - x64-cl.s: Assembly output from windows with the x64 cl assembler
-- armhf-GAS.s: Assembly output from linux with cross-compiled armhf GAS assembler
-- mips-GAS.s: Assembly output from linux with cross-compiled mips GAS assembler
 
 #Takeaways
 - get_pc_thunk() is used on x86 Unix to get the current program counter (PC) and is used to calculate the effective address to the Global Offset Table (GOT). This is required for ASLR to work.
