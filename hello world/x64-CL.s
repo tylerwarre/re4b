@@ -54,15 +54,15 @@ main	PROC
 ; File D:\Tyler\Documents\learn\reverse-engineering\re4b\hello world\1-5.c
 ; Line 3
 $LN3:
-	sub	rsp, 40					; 00000028H
+	sub	rsp, 40 // Allocation of shadow space					; 00000028H
 ; Line 4
 	lea	rcx, OFFSET FLAT:$SG9039
 	call	printf
 ; Line 5
-	xor	eax, eax
+	xor	eax, eax // 32-bit part of rax is cleared for better compatability with 32-bit calling conventions
 ; Line 6
-	add	rsp, 40					; 00000028H
-	ret	0
+	add	rsp, 40	// Release of allocated shadow space				; 00000028H
+	ret	0 // Return from function with code 0
 main	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp
