@@ -13,7 +13,7 @@ main:
 	// Start PLT/GOT setup
 	leal	4(%esp), %ecx
 	.cfi_def_cfa 1, 0
-	andl	$-16, %esp
+	andl	$-16, %esp // Aligns the stack to a 16 byte boundary by zeroing out the last digit of the stack address
 	pushl	-4(%ecx)
 	pushl	%ebp
 	.cfi_escape 0x10,0x5,0x2,0x75,0
