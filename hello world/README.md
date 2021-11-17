@@ -4,6 +4,7 @@
 - x86-GAS.out: Binary from linux with the x86 GAS compiler
 - x64-GAS.s: Assembly output from linux with the x64 GAS assembler
 - x64-GAS.out: Binary from linux with the x64 GAS compiler
+- x86-cl.s: Assembly output from windows with the x86 cl assembler
 - x64-cl.s: Assembly output from windows with the x64 cl assembler
 
 # Takeaways
